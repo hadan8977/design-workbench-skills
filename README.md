@@ -18,7 +18,7 @@ Design guidance often overlaps: one skill chooses a direction, another applies a
 
 ## Quick start
 
-Clone with a GitHub account that has access to this repository:
+Clone the repository:
 
 ```sh
 git clone https://github.com/hadan8977/design-workbench-skills.git
