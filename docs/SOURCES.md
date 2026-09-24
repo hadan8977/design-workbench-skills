@@ -16,9 +16,21 @@ Design Workbench coordinates locally adapted skills and supporting resources. Re
 | `writing-edit` | `no-ai-slop` | Locally curated prose editor; no separate upstream attribution was recorded in the exported folder | No additional license asserted |
 | `writing-tighten` | `stop-slop` | Hardik Pandya, as identified in the original notice | [MIT](../skills/writing-tighten/LICENSE) |
 | `writing-audit` | `avoid-ai-writing` | [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing), with local routing and invocation scope | [MIT](../skills/writing-audit/LICENSE) |
-| `quality-score` | `slop-cop` | [howshannon/slop-cop](https://github.com/howshannon/slop-cop), with local routing and review scope | [MIT](../skills/quality-score/LICENSE) |
+| `quality-score` | `slop-cop` | [howshannon/slop-cop](https://github.com/howshannon/slop-cop), with local routing, review scope, and a TypeScript port of the scoring helper | [MIT](../skills/quality-score/LICENSE) |
 
 Original READMEs and launch materials retained inside skill folders are upstream historical documents. Their names, branding, installation commands, and project claims describe the upstream distribution. The collection README, current `SKILL.md` entrypoints, and shared skill map govern this distribution.
+
+## Runtime ownership
+
+The collection maintains its scoring helper in TypeScript and uses TypeScript for new command-line tools. The port retains the original scoring behavior, report text, slogan data, and MIT attribution; regression fixtures were captured from `score_ticket.py` at collection commit `ff75d3f`.
+
+The following imported implementations retain their original languages and upstream notices:
+
+- `design-lead/scripts/`: Impeccable browser code, launcher scripts, and supporting engine resources.
+- `design-reference/scripts/`: the Python search engine, data checks, and associated upstream tests.
+- `writing-audit/detector/` and `writing-audit/scripts/`: JavaScript detectors and writing utilities.
+
+These paths are marked `linguist-vendored`. Historical `design-review` demonstrations and launch materials are marked `linguist-documentation`. This makes GitHub's language chart describe the maintained code rather than the size of imported tools; it does not remove their runtime requirements. Revisit a path's classification if the collection takes over substantial independent development of that code.
 
 ## Documentation references
 

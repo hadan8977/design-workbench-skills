@@ -106,7 +106,7 @@ The portable core is a collection of `SKILL.md` instructions and relative resour
 | Design planning, critique, and writing | An agent that can read the skill and its referenced files |
 | Local design search | Python 3 and the bundled `design-reference` data |
 | Writing detectors | Node.js for the optional `writing-audit` scripts |
-| Deterministic scoring | Python 3 for `quality-score/scripts/score_ticket.py` |
+| Deterministic scoring | Node.js 22.18+ on the 22.x line, or Node.js 24+, for `quality-score/scripts/score-ticket.mts` |
 | Rendered UI review | Available browser, screenshot, or image-viewing tools |
 | Raster asset generation | An image-generation capability supplied by the host |
 | Live variants and detector engine | Optional upstream Impeccable tooling; see [runtime notes](skills/design-lead/reference/runtime.md) |
@@ -114,6 +114,8 @@ The portable core is a collection of `SKILL.md` instructions and relative resour
 `agents/openai.yaml` and the bundled TOML agent profiles are optional OpenAI-specific adapters. Other hosts use the portable instructions and their own tool interfaces. No hooks, services, browser binaries, or API integrations are installed merely by copying these folders.
 
 The `writing-audit` skill remains explicit-only in its instructions and OpenAI adapter. Other hosts may handle automatic discovery differently, so invoke it deliberately when that detailed workflow is wanted.
+
+Scoring and writing checks use Node.js. Python is needed only for the retained `design-reference` search engine and its maintenance tools. Reading the skills and following their design or writing guidance does not require either runtime.
 
 ## Updating an earlier installation
 
@@ -123,11 +125,27 @@ Update references in your own prompts or automation, install the new folders, an
 
 Optional helper executables, engine state directories, asset filenames, and upstream URLs retain their original names for compatibility. For example, `design-lead` is the skill name; `scripts/impeccable` remains the upstream engine launcher.
 
+The collection's scoring helper has moved from `python scripts/score_ticket.py` to `node scripts/score-ticket.mts`. Its report fields, flags, scoring rules, and fixed slogans are preserved. Update any saved command and replace the old Python helper when refreshing this skill.
+
 ## Contributing
 
 Use English for maintained instructions, documentation, display names, and examples. The work produced by a skill follows the user's requested language; preserve quotations, identifiers, and multilingual test fixtures.
 
 Keep `<domain>-<purpose>` names aligned across folder names, frontmatter, links, and optional display metadata. Put shared routing rules in the skill map. A new specialist should fill a distinct need rather than duplicate an existing lead or editor.
+
+Use **TypeScript** for new collection-owned command-line tools, with **Node.js** as the runtime. Use `.mts` for standalone ES modules so copied skill folders work without a parent package configuration. Keep the syntax compatible with [Node's native type stripping](https://nodejs.org/api/typescript.html); installed tools need no build step or runtime npm packages. HTML, CSS, and React examples remain in their native formats.
+
+Retain upstream engine implementations when preserving their behavior and update path is more valuable than a language rewrite. [Runtime ownership](docs/SOURCES.md#runtime-ownership) identifies those imports. `.gitattributes` excludes imported runtimes and historical demonstrations from GitHub language statistics; the compatibility table above remains the source for actual runtime requirements.
+
+For changes to the maintained TypeScript tools, install development dependencies with the lockfile and run:
+
+```sh
+npm ci
+npm run typecheck
+npm test
+```
+
+The scoring tests compare CLI output with fixtures captured from the previous Python implementation, including grade boundaries, integer precision, Unicode content, and execution outside the repository directory. Type stripping alone does not perform type checking.
 
 Validate edited entrypoints and local links. Exercise a helper when its behavior or resource paths change. Keep upstream notices and distinguish observed behavior from compatibility assumptions or proposed outcomes.
 

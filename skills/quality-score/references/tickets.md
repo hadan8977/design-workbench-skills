@@ -43,9 +43,18 @@ Selection is deterministic:
 
 ## Required output
 
-Run `scripts/score_ticket.py` with the violation counts and evidence. The
+Run `node "<skill-dir>/scripts/score-ticket.mts"` with the violation counts and evidence. The
 default request “slop cop this” uses this same output; Ticket is not a separate
 requirement.
+
+Use Node.js 22.18+ on the 22.x line, or Node.js 24+. The script resolves its
+slogan data relative to its own file and can run from the user's project directory.
+
+```sh
+node "<skill-dir>/scripts/score-ticket.mts" --recipient "Dashboard" \
+  --offense "Repeated labels" --evidence "Two labels describe one action." \
+  --fix "Keep the clearer label." --minors 1
+```
 
 ```text
 🚨 SLOP COP REPORT CARD

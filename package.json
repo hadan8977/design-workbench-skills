@@ -1,0 +1,17 @@
+{
+  "name": "design-workbench-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Coordinated design and writing skills for AI agents",
+  "scripts": {
+    "test": "node --test tests/score-ticket.test.mts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "7.0.2"
+  }
+}

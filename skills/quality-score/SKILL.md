@@ -46,8 +46,10 @@ Follow the [local skill map](../design-lead/reference/skill-map.md). This is an 
 
 Use the mode the user requested. A bare request for quality-score selects Grade mode; select Ticket mode when the user asks for a humorous ticket.
 Grade and Ticket use the scored report card: read
-[report-card tickets](references/tickets.md) and use `scripts/score_ticket.py`;
+[report-card tickets](references/tickets.md) and run `node "<skill-dir>/scripts/score-ticket.mts"`;
 do not improvise its arithmetic, grade bands, or fixed slogans.
+The helper requires Node.js 22.18+ on the 22.x line, or Node.js 24+, and no
+runtime npm packages. Resolve `<skill-dir>` from this skill's installed location.
 Audit and Rewrite return the requested findings or edited artifact without a
 scorecard unless scoring was also requested. An audit does not authorize edits.
 
