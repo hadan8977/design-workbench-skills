@@ -1,0 +1,12 @@
+interface:
+  display_name: "Quality Score"
+  short_description: "Evidence-backed grades and optional quality tickets"
+  icon_small: "./assets/brand/slop-cop-emblem.png"
+  icon_large: "./assets/brand/slop-cop-emblem.png"
+  brand_color: "#FFAE4D"
+  default_prompt: >-
+    Use $quality-score to review this material and return a 0–100 grade with
+    evidence and a recommended next step. Use ticket mode only when requested.
+
+policy:
+  allow_implicit_invocation: true

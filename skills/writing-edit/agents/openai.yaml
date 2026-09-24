@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Edit"
+  short_description: "Clear prose with factual accuracy and personal voice"
+  default_prompt: "Use $writing-edit to improve this draft's clarity while preserving its facts, uncertainty, and my personal voice."
