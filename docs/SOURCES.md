@@ -7,6 +7,7 @@ Design Workbench coordinates locally adapted skills and supporting resources. Re
 | Current skill | Previous local name | Source or attribution | Included notice |
 | --- | --- | --- | --- |
 | `design-lead` | `impeccable` | [pbakaus/impeccable](https://github.com/pbakaus/impeccable), with a locally adapted lead workflow | [Apache-2.0](../skills/design-lead/LICENSE), [third-party notices](../skills/design-lead/NOTICE.md) |
+| `design-apple` | `yu-apple` (upstream name) | [ttyineworld/yu-apple](https://github.com/ttyineworld/yu-apple) by 廷宇, v0.1.0 at `0706a6107311233d8541899fa8a4dfb06f5a0dd5`; adapted Apple-style specialist and deck workflow | [MIT](../skills/design-apple/LICENSE), [adaptation notes](../skills/design-apple/references/source.md) |
 | `design-reference` | `ui-ux-pro-max` | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), with local search guidance | [MIT](../skills/design-reference/LICENSE) |
 | `design-review` | `avoid-ai-design` | [funboy322/avoid-ai-design](https://github.com/funboy322/avoid-ai-design); copyright ungspirit | [MIT](../skills/design-review/LICENSE) |
 | `design-purpose` | `antislop` | Locally curated purpose check; no separate upstream attribution was recorded in the exported folder | No additional license asserted |
@@ -27,6 +28,7 @@ The collection maintains its scoring helper in TypeScript and uses TypeScript fo
 The following imported implementations retain their original languages and upstream notices:
 
 - `design-lead/scripts/`: Impeccable browser code, launcher scripts, and supporting engine resources.
+- `design-apple/scripts/deck.mjs`: unchanged Yu Apple JavaScript deck renderer; its own dependency manifests and HTML template are retained with upstream names and MIT attribution. The collection maintains the English specialist guidance and routing.
 - `design-reference/scripts/`: the Python search engine, data checks, and associated upstream tests.
 - `writing-audit/detector/` and `writing-audit/scripts/`: JavaScript detectors and writing utilities.
 

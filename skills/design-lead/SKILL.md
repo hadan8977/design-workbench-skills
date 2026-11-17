@@ -20,6 +20,7 @@ Read the relevant product context, existing design decisions, target code, asset
 - **Planning without implementation:** [shape](reference/shape.md).
 - **Review without changes:** [critique](reference/critique.md).
 - **Focused refinement:** preserve the established identity, inspect the affected relationships, and use the relevant command below.
+- **Apple-inspired direction, 苹果味, 苹果风, or Yu Apple / 宇苹果:** use [design-apple](../design-apple/SKILL.md) for visual language; keep this lead for interface structure, interaction, and responsive verification. Do not impose that aesthetic on other work.
 - **A named tool workflow:** read its reference and follow its technical requirements within the user's scope.
 
 Before UI edits, read the [craft floor](reference/craft-floor.md). Use the actual rendered target when available. Existing screenshots are useful only after checking their target and freshness against current code.

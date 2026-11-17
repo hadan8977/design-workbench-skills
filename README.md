@@ -2,7 +2,7 @@
 
 **A coordinated design and writing toolkit for AI agents.**
 
-11 skills for turning product goals and visual references into distinctive interfaces, reviewing the result, and refining the words that support it. Built around the open [Agent Skills format](https://agentskills.io/specification), with one design lead and focused specialists.
+12 skills for turning product goals and visual references into distinctive interfaces, reviewing the result, and refining the words that support it. Includes an on-demand Apple-inspired interface and presentation specialist. Built around the open [Agent Skills format](https://agentskills.io/specification), with one design lead and focused specialists.
 
 [Quick start](#quick-start) · [Skills](#skills) · [Workflow](#workflow) · [Compatibility](#compatibility) · [Sources](docs/SOURCES.md)
 
@@ -52,6 +52,7 @@ Names follow `<domain>-<purpose>` in lowercase kebab case. Each folder and its `
 | --- | --- |
 | **Design** | |
 | [design-lead](skills/design-lead/SKILL.md) | Product framing, visual research, concepts, composition, implementation, and overall critique |
+| [design-apple](skills/design-apple/SKILL.md) | Requested Apple-inspired interfaces and Yu Apple / 宇苹果 decks, with optional HTML, PNG, and PDF tools |
 | [design-reference](skills/design-reference/SKILL.md) | Focused searches for palettes, typography, charts, UX guidance, and stack patterns |
 | [design-review](skills/design-review/SKILL.md) | Diagnosing generic UI choices against the actual brief and rendered result |
 | [design-purpose](skills/design-purpose/SKILL.md) | Checking whether a repeated visual or copy choice serves a useful purpose |
@@ -66,6 +67,8 @@ Names follow `<domain>-<purpose>` in lowercase kebab case. Each folder and its `
 | [quality-score](skills/quality-score/SKILL.md) | Requested evidence-backed grades, report cards, or humorous tickets |
 
 Start broad design tasks with `design-lead`. A focused request can go directly to its specialist. Use one writing editor per passage; scoring is optional.
+
+Ask for “苹果味”, “苹果风”, “Apple-inspired”, or “Yu Apple / 宇苹果” to select `design-apple`; it does not change the default style of other work. For example: “Use design-apple to give this product page an Apple-inspired direction” or “用宇苹果风格把这份材料做成演示稿”. Interfaces stay under Design Lead's interaction and responsive workflow. Decks use Yu Apple's narrative guidance; its bundled exporter produces HTML, PNG, and PDF. Editable PPTX or Google Slides requires the host's corresponding presentation workflow.
 
 ## Workflow
 
@@ -107,6 +110,7 @@ The portable core is a collection of `SKILL.md` instructions and relative resour
 | Local design search | Python 3 and the bundled `design-reference` data |
 | Writing detectors | Node.js for the optional `writing-audit` scripts |
 | Deterministic scoring | Node.js 22.18+ on the 22.x line, or Node.js 24+, for `quality-score/scripts/score-ticket.mts` |
+| Optional Apple-style deck rendering and export | Node.js 20.9+ and pinned dependencies in `skills/design-apple/`; run `npm ci` there, then `npx playwright install chromium` if needed. See [tooling](skills/design-apple/references/tooling.md) |
 | Rendered UI review | Available browser, screenshot, or image-viewing tools |
 | Raster asset generation | An image-generation capability supplied by the host |
 | Live variants and detector engine | Optional upstream Impeccable tooling; see [runtime notes](skills/design-lead/reference/runtime.md) |

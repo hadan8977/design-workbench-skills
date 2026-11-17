@@ -10,6 +10,7 @@ Repository instructions use English. Deliver the user's work in their requested 
 | --- | --- | --- |
 | Design a new interface, substantial redesign, or plan a user journey | [design-lead](../SKILL.md) | [new-work](new-work.md), then relevant specialists |
 | Review whether a design meets its goals | [design-lead critique](critique.md) | Actual render, task walkthrough, [craft floor](craft-floor.md) |
+| Apply a requested Apple look, 苹果味, 苹果风, or Yu Apple / 宇苹果 direction | [design-apple](../../design-apple/SKILL.md) | Lead coordinates interfaces; specialist supplies visual language and optional deck workflow |
 | Find a palette, type pairing, UX rule, chart, or implementation pattern | [design-reference](../../design-reference/SKILL.md) | A focused local query; results are candidates |
 | Examine generic or unsupported UI choices | [design-review](../../design-review/SKILL.md) | [design-purpose](../../design-purpose/SKILL.md) for the purpose test |
 | Simplify a task-oriented screen or dense controls | [design-simplify](../../design-simplify/SKILL.md) | Preserve the selected identity and task structure |
@@ -33,6 +34,8 @@ A specialist request goes directly to that specialist. A local spacing fix does 
 - General and specialist reviews contribute to one findings list. Keep the original design goal during fixes and avoid a second redesign caused by a reviewer's taste.
 
 Case studies are examples, not global defaults. A preference inferred from one example is weaker than an explicit brief.
+
+An explicit Apple-inspired brief selects `design-apple`; otherwise it is not the default aesthetic. For interfaces, Design Lead owns task structure, responsiveness, interaction, and verification while the specialist supplies the selected visual direction. For Apple-style decks, use the specialist's narrative workflow and the host's presentation tools for required output. Yu Apple's renderer supports HTML, PNG, and PDF, not editable PPTX. Intentional system fonts, neutral surfaces, and familiar controls are judged against the approved brief rather than automatically rejected by a general anti-slop catalog.
 
 ## Proportional workflow
 

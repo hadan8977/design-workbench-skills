@@ -1,0 +1,10 @@
+interface:
+  display_name: "Design Apple"
+  short_description: "Apple-inspired interfaces and Yu Apple presentation craft"
+  icon_small: "./assets/skill-icon.svg"
+  icon_large: "./assets/skill-icon.svg"
+  brand_color: "#0071E3"
+  default_prompt: "Use $design-apple to give this interface or presentation an Apple-inspired visual direction while preserving its purpose and established constraints."
+
+policy:
+  allow_implicit_invocation: true

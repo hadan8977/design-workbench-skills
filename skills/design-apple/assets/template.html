@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宇苹果 · 演示稿起点</title>
+<style>
+:root{--ink:#1d1d1f;--gray:#86868b;--blue:#0071e3;--mist:#f5f5f7;--scale:1}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{display:flex;align-items:center;justify-content:center;padding-bottom:80px;background:#e9e9ee;color:var(--ink);font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:600}svg{display:block}.viewport{position:relative;width:calc(1920px * var(--scale));height:calc(1080px * var(--scale))}.slide{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:top left;transform:scale(var(--scale));background:white;display:none}.slide.active{display:block}.dark{background:#050506;color:#f5f5f7}.mist{background:var(--mist)}.eyebrow{position:absolute;left:112px;top:76px;font-size:25px;line-height:1.5;color:var(--gray);letter-spacing:1px}.title{position:absolute;left:108px;right:108px;top:155px;font-size:78px;line-height:1.23;letter-spacing:-1.5px}.hero-title,.title,.quote{padding-bottom:20px}.accent{background:linear-gradient(95deg,#24a7ff 0%,#006cff 65%,#6260ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}.support{font-size:31px;line-height:1.65;color:#777780}.foot{position:absolute;left:112px;right:190px;bottom:52px;font-size:19px;line-height:1.5;color:#86868b}.page-number{position:absolute;right:108px;bottom:52px;color:#9b9b9f;font:21px "Helvetica Neue",Arial,sans-serif;letter-spacing:2px}.small-label{font-size:24px;line-height:1.5;color:var(--gray)}
+.hero-title{position:absolute;left:108px;top:309px;font-size:104px;line-height:1.25;letter-spacing:-3px;z-index:2}.hero-sub{position:absolute;left:112px;top:637px;font-size:35px;color:#71717a;line-height:1.6}.hero-art{position:absolute;left:1260px;top:292px;width:470px;height:470px}.hero-art .thin{stroke:#d9e6f6;stroke-width:3;fill:none}.hero-art .solid{fill:#0071e3}.hero-art text{font-family:"Helvetica Neue",Arial,sans-serif}.quote{position:absolute;left:112px;top:275px;font-size:100px;line-height:1.35;letter-spacing:-2px}.quote-note{position:absolute;left:119px;top:650px;font-size:33px;line-height:1.65;color:#93939d}.process{position:absolute;left:170px;right:170px;top:457px;height:380px}.process svg{position:absolute;left:0;top:0;width:1580px;height:150px}.steps{position:absolute;left:0;top:170px;width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:100px}.step h3{font-size:43px;line-height:1.4;margin-bottom:18px}.step p{font-size:29px;line-height:1.6;color:#797981}.step .small-label{margin-bottom:12px}.process .step:nth-child(2){text-align:center}.process .step:nth-child(3){text-align:right}.process-summary{position:absolute;left:170px;right:170px;top:929px;border-top:1px solid #d8d8de;padding-top:30px;text-align:center;font-size:29px;font-weight:500;line-height:1.45}.aside{position:absolute;left:1215px;top:189px;right:112px;font-size:30px;line-height:1.6;color:#86868b}.shared-box{position:absolute;left:88px;right:88px;top:405px;height:545px;background:white;border-radius:64px;padding:50px 58px;box-shadow:0 18px 38px #16162406}.scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:80px}.scene{text-align:center}.scene svg{width:74px;height:74px;margin:0 auto 26px;color:#0071e3}.scene h3{font-size:43px;line-height:1.4}.scene p{font-size:29px;color:#777780;line-height:1.6;margin-top:17px}.shared-base{position:absolute;left:72px;right:72px;bottom:48px;padding-top:30px;border-top:1px solid #e3e3e8;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:40px;align-items:start}.shared-base h3{font-size:28px;line-height:1.5;color:#81818b}.shared-base p{font-size:28px;line-height:1.5}.shared-base p span{display:block;font-size:24px;color:#86868b;margin-top:8px}.deck-nav{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;padding:8px 12px;background:#fffffff0;border-radius:30px;box-shadow:0 4px 20px #0001;z-index:50;font-size:14px;white-space:nowrap}.deck-nav button{font:inherit;border:0;border-radius:22px;background:transparent;color:#555560;padding:11px 18px;cursor:pointer}.deck-nav button:hover{background:#eeeeF2}.deck-nav .counter{min-width:65px;text-align:center;color:#777780}.capture{padding:0}.capture [data-deck-ui]{display:none!important}
+@media print{@page{size:1920px 1080px;margin:0}html,body{display:block;width:1920px;height:auto;overflow:visible;background:white;padding:0}.viewport{width:1920px;height:auto}.slide{position:relative;display:block!important;transform:none;break-after:page}.slide:last-child{break-after:auto}[data-deck-ui]{display:none!important}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<!-- Editable starting points, not a fixed slide sequence. Duplicate or replace sections as the argument requires.
+     Keep .viewport > .slide[data-page], unique data-page values, and the yuDeck API for the export tools. -->
+<main class="viewport">
+<section class="slide" data-page="01" aria-label="命题封面">
+  <p class="eyebrow">宇苹果 · 演示稿起点</p>
+  <h1 class="hero-title">让复杂的想法，<br><span class="accent">变得容易理解。</span></h1>
+  <p class="hero-sub">先找到值得记住的判断。<br>让每一页，都推动理解向前一步。</p>
+  <svg class="hero-art" viewBox="0 0 470 470" aria-hidden="true">
+    <circle class="thin" cx="235" cy="235" r="220"/><circle class="thin" cx="235" cy="235" r="158"/><circle class="thin" cx="235" cy="235" r="95"/>
+    <path d="M80 390 235 235 393 78" fill="none" stroke="#0071e3" stroke-width="6" stroke-linecap="round"/>
+    <circle class="solid" cx="235" cy="235" r="23"/><circle fill="#fff" stroke="#0071e3" stroke-width="5" cx="393" cy="78" r="14"/>
+  </svg>
+  <p class="foot">廷宇 · 原创方法与版式示例</p><div class="page-number">01</div>
+</section>
+<section class="slide dark" data-page="02" aria-label="核心判断">
+  <p class="eyebrow">内容先行</p>
+  <h1 class="quote">先让观点成立。<br>再让页面<span class="accent">有力量。</span></h1>
+  <p class="quote-note">一个判断，一组必要的证据。<br>观众能够复述，才算真正讲清。</p>
+  <p class="foot">示例命题页；请用自己的核心判断替换。</p><div class="page-number">02</div>
+</section>
+<section class="slide mist" data-page="03" aria-label="制作流程">
+  <p class="eyebrow">从想法到成品</p>
+  <h1 class="title">三轮制作，<br><span class="accent">逐步收敛。</span></h1>
+  <div class="process">
+    <svg viewBox="0 0 1580 150" aria-hidden="true">
+      <defs><linearGradient id="flow" x1="0" x2="1"><stop stop-color="#24a7ff"/><stop offset=".55" stop-color="#006cff"/><stop offset="1" stop-color="#7360ff"/></linearGradient></defs>
+      <path d="M38 96 C310 30 540 145 790 96 S1260 30 1542 96" fill="none" stroke="url(#flow)" stroke-width="16" opacity=".2"/>
+      <path d="M38 96 C310 30 540 145 790 96 S1260 30 1542 96" fill="none" stroke="url(#flow)" stroke-width="5"/>
+      <circle cx="38" cy="96" r="32" fill="#f5f5f7" stroke="#24a7ff" stroke-width="6"/><circle cx="790" cy="96" r="32" fill="#f5f5f7" stroke="#006cff" stroke-width="6"/><circle cx="1542" cy="96" r="32" fill="#f5f5f7" stroke="#7360ff" stroke-width="6"/>
+    </svg>
+    <div class="steps">
+      <div class="step"><p class="small-label">01 · 提炼</p><h3>找到主张</h3><p>保留最有价值的判断，<br>合并反复出现的解释。</p></div>
+      <div class="step"><p class="small-label">02 · 组织</p><h3>安排节奏</h3><p>让观点、证据与案例，<br>在页序里自然推进。</p></div>
+      <div class="step"><p class="small-label">03 · 校准</p><h3>完成整套</h3><p>先检查整体节奏，<br>再修正每一页的细节。</p></div>
+    </div>
+  </div>
+  <p class="process-summary">每一轮，集中解决一个层级的问题。</p><div class="page-number">03</div>
+</section>
+<section class="slide mist" data-page="04" aria-label="共享条件与场景差异">
+  <p class="eyebrow">信息组织示例</p>
+  <h1 class="title">变化的是场景，<br><span class="accent">共同的是基础。</span></h1>
+  <p class="aside">各模块保留各自的差异。<br>共享条件，集中说明一次。</p>
+  <div class="shared-box">
+    <div class="scenes">
+      <div class="scene"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="12" width="44" height="32" rx="5"/><path d="M24 55h16M32 44v11M19 23h26M19 32h17"/></svg><h3>提案</h3><p>让客户看懂价值，<br>知道下一步如何推进。</p></div>
+      <div class="scene"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 20 24-10 24 10-24 11zM16 25v19c9 7 23 7 32 0V25M56 20v24"/></svg><h3>分享</h3><p>让听众建立理解，<br>带走可以使用的方法。</p></div>
+      <div class="scene"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 52V12M12 52h43M20 42l11-14 10 6 13-21"/><path d="M44 13h10v10"/></svg><h3>复盘</h3><p>解释结果的来由，<br>形成下一次的判断。</p></div>
+    </div>
+    <div class="shared-base"><h3>统一准备</h3><p>一个核心命题<span>明确希望观众记住什么</span></p><p>可追溯的证据<span>原始数据、案例与素材</span></p><p>明确的表达边界<span>受众、场合与信息披露</span></p></div>
+  </div>
+  <p class="foot">所有图形为原创矢量示例；不包含客户资料或第三方品牌素材。</p><div class="page-number">04</div>
+</section>
+</main>
+<nav class="deck-nav" data-deck-ui aria-label="演示导航"><button id="previous" type="button">← 上一页</button><span class="counter"></span><button id="next" type="button">下一页 →</button></nav>
+<script>
+(()=>{
+ const slides=[...document.querySelectorAll('.viewport > .slide')];let current=0;
+ function fit(){const full=document.body.classList.contains('capture')||document.fullscreenElement;document.documentElement.style.setProperty('--scale',Math.min(innerWidth/1920,(innerHeight-(full?0:80))/1080));}
+ function show(index){current=Math.max(0,Math.min(slides.length-1,index));slides.forEach((s,i)=>s.classList.toggle('active',i===current));const counter=document.querySelector('.counter');if(counter)counter.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');}
+ document.querySelector('#previous').onclick=()=>show(current-1);document.querySelector('#next').onclick=()=>show(current+1);
+ addEventListener('resize',fit);addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current+1);}if(e.key==='ArrowLeft')show(current-1);if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1);});
+ window.yuDeck={show,fit,get count(){return slides.length;}};show(0);fit();
+})();
+</script>
+</body>
+</html>

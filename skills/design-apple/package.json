@@ -1,0 +1,22 @@
+{
+  "name": "yu-apple",
+  "version": "0.1.0",
+  "private": true,
+  "description": "宇苹果：廷宇的演示稿方法与可移植预览、质检、PDF 导出工具",
+  "license": "MIT",
+  "author": "廷宇",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "check": "node scripts/deck.mjs check",
+    "render": "node scripts/deck.mjs render",
+    "pdf": "node scripts/deck.mjs pdf"
+  },
+  "dependencies": {
+    "playwright": "1.62.1",
+    "sharp": "0.35.5",
+    "pdf-lib": "1.17.1"
+  }
+}

@@ -2,6 +2,7 @@
 *.md text eol=lf
 *.py text eol=lf
 *.js text eol=lf
+*.mjs text eol=lf
 *.mts text eol=lf
 *.json text eol=lf
 *.yaml text eol=lf
@@ -15,6 +16,7 @@ skills/design-lead/scripts/impeccable text eol=lf
 
 # Imported upstream runtimes retain their original implementation languages.
 skills/design-lead/scripts/** linguist-vendored
+skills/design-apple/scripts/** linguist-vendored
 skills/design-reference/scripts/** linguist-vendored
 skills/writing-audit/detector/** linguist-vendored
 skills/writing-audit/scripts/** linguist-vendored
